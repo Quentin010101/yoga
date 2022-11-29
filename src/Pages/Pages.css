@@ -1,0 +1,88 @@
+#hero{
+    min-height: 100vh;
+}
+.heroMain{
+    padding: 100px 30px 25px 30px;
+}
+.section3-2{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+.section2-3{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+.imgContainer{
+    position: relative;
+    margin: 50px 0;
+}
+#imgBack, #imgYoga, #yoga2 , #back2 {
+    position: absolute;
+}
+#imgBack{
+    z-index: 1;
+}
+#imgBack > img, #imgYoga > img{
+    height: 600px;
+}
+#imgYoga{
+    z-index: 2;
+}
+.titreContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: full;
+    min-height: 650px;
+}
+.titreContainer h2{
+    font-size: 55px;
+    font-family: 'Sono';
+    font-weight: 600;
+}
+.titreContainer h3{
+    font-size: 30px;
+}
+.titreContainer p{
+    text-align: center;
+    max-width: 450px;
+    padding: 50px 10px
+}
+.titreContainer button{
+    border-radius: 0.75rem;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: padding 0.3s;
+}
+.titreContainer button:hover{
+    padding: 10px 20px;
+}
+.svg{
+    vertical-align:top
+}
+#yoga2{
+    z-index: 2;
+    inset: 0;
+    left: 25%;
+}
+#back2{
+    z-index: 1;
+    left: 25%;
+}
+#yoga2 > img{
+    height: 420px;
+}
+#back2 > img{
+    height: 420px;
+    transform: rotate(110deg);
+}
+.buttonJoin{
+    border: 1px solid; 
+}
+h4{
+    font-family: 'Sono';
+    font-size: 23px;
+}

@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import { Header } from './global/Header';
+import { Hero } from './Pages/Hero';
+import { Section1 } from './Pages/Section1';
+import { theme } from './theme'
 
 function App() {
+  const palette = theme()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{color: palette.text.normal, backgroundColor: palette.background.dark}}>
+        <Header />
+        <Hero />
+        <Section1 />
     </div>
   );
 }
