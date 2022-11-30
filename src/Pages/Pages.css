@@ -1,6 +1,4 @@
-#hero{
-    min-height: 100vh;
-}
+
 .heroMain{
     padding: 100px 30px 25px 30px;
 }
@@ -10,14 +8,18 @@
 }
 .section2-3{
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 2fr;
 }
+
+
 .imgContainer{
     position: relative;
     margin: 50px 0;
 }
 #imgBack, #imgYoga, #yoga2 , #back2 {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
 }
 #imgBack{
     z-index: 1;
@@ -33,7 +35,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: full;
+    width: 100%;
     min-height: 650px;
 }
 .titreContainer h2{
@@ -65,12 +67,9 @@
 }
 #yoga2{
     z-index: 2;
-    inset: 0;
-    left: 25%;
 }
 #back2{
     z-index: 1;
-    left: 25%;
 }
 #yoga2 > img{
     height: 420px;
@@ -85,4 +84,35 @@
 h4{
     font-family: 'Sono';
     font-size: 23px;
+}
+@media screen and (max-width: 1000px){
+    .section3-2, .section2-3{
+        display: flex;
+        flex-direction: column;
+    }
+    .section2-3{
+        flex-direction: column-reverse;
+    }
+    .titreContainer{
+        min-height: 400px;
+    }
+    #imgBack > img, #imgYoga > img, #yoga2 > img, #back2 > img{
+        height: 200px;
+    }
+    .imgContainer{
+        margin: 10px 0;
+        height: 200px;
+    }
+    .titreContainer h2{
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .titreContainer h3{
+        font-size: 18px;
+    }
+    .titreContainer p{
+        text-align: center;
+        max-width: 400px;
+        padding: 20px 10px
+    }
 }

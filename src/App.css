@@ -16,5 +16,5 @@ li{
   list-style: none;
 }
 .App{
-  overflow-x: hidden;
+  overflow: hidden;
 }

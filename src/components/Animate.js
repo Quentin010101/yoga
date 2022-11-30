@@ -15,7 +15,6 @@ export const AnimateY = (animateObject) => {
 
 }
 export const AnimateX = (animateObject) => {
-
     for (let i = 0; i < animateObject.length; i++) {
 
         const reference = animateObject[i].reference
