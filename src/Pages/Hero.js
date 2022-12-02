@@ -54,6 +54,9 @@ export const Hero = () => {
         AnimateY([title2Y, title3Y, p4Y])
         AnimateX([background, yoga, buttonX])
     })
+    const tt = () =>{
+        console.log('t')
+    }
     return (
         <section id="hero">
             <div className='heroMain section3-2'>
@@ -61,7 +64,7 @@ export const Hero = () => {
                     <h2 className="title2" style={{ color: palette.secondary.normal }}>Refreshing</h2>
                     <h3 className="title3" style={{ color: palette.secondary.light }}>body and soul</h3>
                     <p className="p4Y" style={{ color: palette.text.light }}>Meet yourself where you are mindfulness balance, tadasana intentional. Namaste inhales, exhale reach expand open intentional Bikram intentional. Rinse deeper out of your comfort zone bandha self-care hug.</p>
-                    <button id="buttonX" style={{ color: 'white', backgroundColor: palette.secondary.normal }}>More information</button>
+                    <button onClick={()=> tt()} id="buttonX" style={{ color: 'white', backgroundColor: palette.secondary.normal }}>More information</button>
                 </div>
                 <div className='imgContainer'>
                     <div id="imgYoga">

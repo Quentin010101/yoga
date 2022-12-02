@@ -2,6 +2,7 @@ import './App.css';
 import { Header } from './global/Header';
 import { Hero } from './Pages/Hero';
 import { Section1 } from './Pages/Section1';
+import { Section2 } from './Pages/Section2';
 import { theme } from './theme'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Header />
         <Hero />
         <Section1 />
+        <Section2 />
     </div>
   );
 }

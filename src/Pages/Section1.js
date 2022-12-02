@@ -57,7 +57,8 @@ export const Section1 = () => {
         delay: 0.4,
         ease: 'power1'
     }
-    useEffect(()=>{
+    
+    useEffect(() => {
         OnScroll(h4.current, AnimateY, [animationY, animationY2, animationY3])
         OnScroll(yoga.current, AnimateX, [animationX1, animationX2, animationX3])
     })

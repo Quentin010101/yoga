@@ -34,23 +34,34 @@
     font-weight: 500;
     font-family: 'Sono', sans-serif;
 }
-/* @media (max-width: 1000px){
+.burger{
+    display: none;
+    z-index: 100;
+    position: relative;
+    cursor: pointer;
+}
+@media (max-width: 1000px){
     .burger{
-        z-index: 100;
-        position: relative;
-        cursor: pointer;
+        display: block;
+    }
+    .open{
+        right: 0vw;
     }
     nav{
         position: fixed;
-        right: 0;
+        display: flex;
+        justify-content: center;
+        right: -100vw;
+        width: 100vw;
         top: 0;
         height: 100vh;
-        padding: 0 20px;
         backdrop-filter: blur(10px);
+        transition: right 1s;
     }
     nav > .liste{
         height: 100%;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
-} */
+} 

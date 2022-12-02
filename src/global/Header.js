@@ -2,17 +2,15 @@ import { Link } from 'react-router-dom'
 import './Global.css'
 import { theme } from '../theme'
 import logo from '../asset/logo.png'
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimateY } from '../components/Animate'
 import MenuIcon from '@mui/icons-material/Menu';
-import { gsap } from "gsap";
 
 export const Header = () => {
 
     const palette = theme()
 
-    // const [navActive, setNavActive] = useState(false)
-    // const [isVisible, seIsVisible] = useState(false)
+    const [navActive, setNavActive] = useState(false)
 
     const navLinks = ['Home', 'About us', 'Blog', 'Contact']
     const navList = navLinks.map((nav, index) =>
@@ -20,27 +18,11 @@ export const Header = () => {
             <Link to="#" style={{ color: palette.primary.dark }}>{nav}</Link>
         </li>
     )
-    // const animationNav = () =>{
-    //     gsap.from('#nav', {x: 200, duration:2})
-    // }
-    // const updateNav = () =>{
-    //     if(isVisible) { 
-    //         animationNav()
-    //         seIsVisible(false) 
-    //     }else{
-    //         animationNav() 
-    //         seIsVisible(true) 
-    //     }  
-    // }
-    // const resize = () => {
-    //     window.innerWidth > 1000 ?  setNavActive(true) : setNavActive(false)
-    //     console.log(navActive)
-    // }
-    // useEffect(() =>{
-    //     window.addEventListener('resize', resize())
-    // })
+    const updateNav = () =>{
+        setNavActive(!navActive)
+    }
 
-    useLayoutEffect(() => {
+    useEffect(() => {
 
         document.querySelectorAll('.listeItems').forEach((element, index) => {
             const animateY = {
@@ -61,7 +43,7 @@ export const Header = () => {
         }
         AnimateY([animateLogo])
 
-    })
+    }, [])
 
     return (
         <header className='header'>
@@ -70,13 +52,11 @@ export const Header = () => {
                 <span>NatureStyle</span>
             </div>
             <div className='navContainer'>
-                {/* {
-                    navActive ?
-                (<div className='burger' onClick={()=> updateNav()}>
+                <div className='burger' onClick={() => updateNav()}>
                     <MenuIcon sx={{ color: palette.primary.dark }} />
-                </div>) : ('')
-                } */}
-                <nav id="nav">
+                </div>
+
+                <nav id="nav" className={navActive ? 'open' : ''}>
                     <ul className='liste'>
                         {navList}
                     </ul>
